@@ -39,7 +39,7 @@ clima-api/
 │       ├── controller    # Camada de entrada (REST)
 │       ├── service       # Regras de negócio
 │       ├── repository    # Acesso a dados (JPA)
-│       ├── model         # Entidades JPA
+│       ├── domain         # Entidades JPA
 │       └── ClimaApiApplication.java
 ├── src/main/resources
 │   └── application.properties
