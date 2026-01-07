@@ -105,9 +105,7 @@ Ao final do processo:
 | Método | Endpoint          | Descrição                                                   |
 |--------|-------------------|-------------------------------------------------------------|
 | POST   | `/clima/{cidade}` | Busca informações do clima e salva no database.             |
-| ------ | ----------------- | ----------------------------------------------------------- |
 | GET    | `/clima`          | Lista todas as informações que já foram salvas no database. |
-| ------ | ----------------- | ----------------------------------------------------------- |
 | GET    | `/clima/{cidade}` | Lista os dados que foram salvos da cidade informada.        |
 
 *(Novos endpoints podem ser adicionados facilmente seguindo o padrão Controller → Service → Repository)*
