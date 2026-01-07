@@ -102,9 +102,13 @@ Ao final do processo:
 
 > *(Endpoints simples apenas para fins de demonstração do fluxo REST)*
 
-| Método | Endpoint  | Descrição                    |
-| ------ | --------- | ---------------------------- |
-| GET    | `/health` | Verificação de status da API |
+| Método | Endpoint          | Descrição                                                   |
+|--------|-------------------|-------------------------------------------------------------|
+| POST   | `/clima/{cidade}` | Busca informações do clima e salva no database.             |
+| ------ | ----------------- | ----------------------------------------------------------- |
+| GET    | `/clima`          | Lista todas as informações que já foram salvas no database. |
+| ------ | ----------------- | ----------------------------------------------------------- |
+| GET    | `/clima/{cidade}` | Lista os dados que foram salvos da cidade informada.        |
 
 *(Novos endpoints podem ser adicionados facilmente seguindo o padrão Controller → Service → Repository)*
 
