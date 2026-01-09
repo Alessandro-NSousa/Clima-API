@@ -4,8 +4,10 @@ import com.clima.api.clima_api.domain.Clima;
 import com.clima.api.clima_api.dto.ClimaResponseDTO;
 import com.clima.api.clima_api.service.ClimaService;
 import jakarta.validation.ValidationException;
+import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -31,12 +33,23 @@ public class ClimaController {
     }
 
     @GetMapping
-    public Page<ClimaResponseDTO> listar(@PageableDefault(sort = {"city"})Pageable paginacao) {
+    public Page<ClimaResponseDTO> listar(@ParameterObject
+         @PageableDefault(
+                 size = 10, page = 0,
+                 sort = "city",
+                 direction = Sort.Direction.ASC
+         )Pageable paginacao) {
         return service.listar(paginacao);
     }
 
     @GetMapping("/{cidade}")
-    public Page<ClimaResponseDTO> listarPorCidade(@PathVariable String cidade,  @PageableDefault()Pageable paginacao) {
+    public Page<ClimaResponseDTO> listarPorCidade(@PathVariable String cidade,  @ParameterObject
+        @PageableDefault(
+                size = 10,
+                page = 0,
+                sort = "city",
+                direction = Sort.Direction.ASC
+        )Pageable paginacao) {
         return service.listarPorCidade(cidade, paginacao);
     }
 }
