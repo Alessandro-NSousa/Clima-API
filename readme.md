@@ -86,7 +86,6 @@ SPRING_DATASOURCE_PASSWORD=postgres
 ### 3️ Subindo a aplicação
 
 ```bash
-mvn clean package -DskipTests
 
 docker compose up --build
 ```
