@@ -115,7 +115,6 @@ Ao final do processo:
 ## Possíveis Evoluções
 
 - Integração com API externa de clima (OpenWeather, WeatherAPI, etc.)
-- Documentação automática com **Swagger/OpenAPI**
 - Implementação de testes unitários
 - Paginação e filtros
 - Segurança com Spring Security
